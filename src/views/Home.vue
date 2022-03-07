@@ -4,10 +4,10 @@
       v-for="item in meta"
       class="col-md-4 col-lg-3 col-sm-6"
       style="margin-top: 10px"
-      :key="item"
+      :key="item.id"
     >
       <div class="card">
-        <img v-if="item.name" class="zoom" :src="image(item.cover)" alt />
+        <img v-if="item.name" class="zoom" :src="item.cover" alt />
         <div v-else class="skeleton-image zoom"></div>
         <div class="card-body">
           <h3 class="card-title">
@@ -20,36 +20,28 @@
       </div>
     </div>
   </div>
+  <div class="btn-list justify-content-center" style="margin-top: 20px;">
+    <a href="#" @click="init()" class="btn btn-pill btn-blue btn-lg">刷新</a>
+  </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Icon from "../components/Icon";
+import { ref } from 'vue'
 export default {
-  components: { Icon },
-  data() {
-    return {
-      meta: undefined,
+  setup() {
+    const meta = ref(['','','','','','','','','','','',''])
+    const init = () => {
+      meta.value = ['','','','','','','','','','','',''];
+      axios.get('https://backend-delta-five.vercel.app/api?count=12')
+        .then(response => (meta.value = response.data))
+        .catch(error => {
+          console.log(error)
+        });
     }
-  },
-  methods: {
-    image(cover) {
-      if (cover == 'https://some.image') return 'https://pic.rmb.bdstatic.com/bjh/1bc4fa1225de983ad61b287ca11b328d.png'
-      return cover
-    }
-  },
-  created() {
-    const data = []
-    for (let i = 1; i <= 12; i++) {
-      data.push({ "": "", });
-    }
-    this.meta = data
-    axios.get('https://backend-delta-five.vercel.app/api?count=12')
-      .then(response => (this.meta = response.data))
-      .catch(error => {
-        console.log(error)
-      });
-  },
+    init()
+    return { meta, init }
+  }
 }
 </script>
 
