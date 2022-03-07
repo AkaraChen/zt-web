@@ -14,7 +14,8 @@ export default {
         },
         {
           title: "关于",
-          to: "/about",
+          link: "https://docs-eta-red.vercel.app/",
+          target: "_blank",
           icon: "dashboard",
         },
       ],
