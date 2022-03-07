@@ -19,7 +19,7 @@ export default {
           icon: "dashboard",
         },
       ],
-      icon: "https://preview.tabler.io/static/logo.svg",
+      icon: "https://pic.rmb.bdstatic.com/bjh/cfcaab087f3c2a6f14d1c292273140d7.png",
       sticky: true,
     };
   },
