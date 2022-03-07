@@ -24,7 +24,7 @@
 
 <script>
 import axios from 'axios'
-import Icon from "../tabler/Icon";
+import Icon from "../components/Icon";
 export default {
   components: { Icon },
   data() {
