@@ -33,7 +33,7 @@ export default {
     const meta = ref(['','','','','','','','','','','',''])
     const init = () => {
       meta.value = ['','','','','','','','','','','',''];
-      axios.get('https://backend-delta-five.vercel.app/api?count=12')
+      axios.get('https://zhutian.vercel.app/api?count=12')
         .then(response => (meta.value = response.data))
         .catch(error => {
           console.log(error)
