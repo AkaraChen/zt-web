@@ -7,10 +7,13 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@types/pg": "^8.6.5",
+    "@vercel/node": "^1.13.0",
     "axios": "^0.26.0",
     "core-js": "^3.6.5",
     "js-cookie": "^3.0.1",
     "marked": "^3.0.4",
+    "pg": "^8.7.3",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
