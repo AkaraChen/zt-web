@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="btn-list justify-content-center" style="margin-top: 20px;">
-    <a href="#" @click="init()" class="btn btn-pill btn-blue btn-lg">刷新</a>
+    <a href="#" @click="init()" class="btn btn-ghost-primary">查看更多</a>
   </div>
 </template>
 
