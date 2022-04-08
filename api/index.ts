@@ -13,7 +13,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   if (count > 20) count = 1;
   const pool = await createPool();
   pool.query(
-    `select name,link,category,cover from zhutian.web_content order by random() limit ${count}`,
+    `select * from zhutian.web_content order by random() limit ${count}`,
     (err, result) => {
       if (err) throw err.stack;
       res.json(result.rows);
