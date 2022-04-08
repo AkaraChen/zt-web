@@ -6,7 +6,6 @@
       :key="item.id"
     >
       <div class="card">
-        <img v-if="item.name" class="zoom" :src="item.cover" alt />
         <div class="card-body">
           <h3 class="card-title">
             <a :href="item.link" target="_blank">
