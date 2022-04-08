@@ -1,15 +1,11 @@
 <template>
   <div class="row">
-    <div v-for="item in meta" class="col-md-6" style="margin-top: 10px" :key="item.id">
+    <div v-for="item in meta" class="col-md-4" style="margin-top: 10px" :key="item.id">
       <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">
-            <a :href="item.link" target="_blank">
-              <p>{{ item.name }}</p>
-            </a>
-          </h3>
-        </div>
         <div class="card-body">
+          <h3 class="card-title">
+            <a :href="item.link">{{ item.name }}</a>
+          </h3>
           <p class="text-muted">{{ item.description }}</p>
           <span class="badge bg-blue-lt">{{ item.category }}</span>
         </div>
