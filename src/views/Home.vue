@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-body">
           <h3 class="card-title">
-            <a :href="item.link">{{ item.name }}</a>
+            <a :href="item.link" target="_blank">{{ item.name }}</a>
           </h3>
           <p class="text-muted">{{ item.description }}</p>
           <span class="badge bg-blue-lt">{{ item.category }}</span>
