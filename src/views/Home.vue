@@ -10,7 +10,7 @@
           </h3>
         </div>
         <div class="card-body">
-          <p class="text-muted">{{ item.des }}</p>
+          <p class="text-muted">{{ item.description }}</p>
           <span class="badge bg-blue-lt">{{ item.category }}</span>
         </div>
       </div>
