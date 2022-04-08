@@ -46,4 +46,12 @@ p {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.card-title {
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  margin-top: 0.5rem;
+}
 </style>
