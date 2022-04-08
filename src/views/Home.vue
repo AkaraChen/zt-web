@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div v-for="item in meta" class="col-md-4" style="margin-top: 10px" :key="item.id">
+    <div v-for="item in meta" class="6" style="margin-top: 10px" :key="item.id">
       <div class="card">
         <div class="card-body">
           <h3 class="card-title">
