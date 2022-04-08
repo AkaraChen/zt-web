@@ -1,18 +1,17 @@
 <template>
   <div class="row">
-    <div
-      v-for="item in meta"
-      style="margin-top: 10px"
-      :key="item.id"
-    >
+    <div v-for="item in meta" style="margin-top: 10px" :key="item.id">
       <div class="card">
-        <div class="card-body">
+        <div class="card-header">
           <h3 class="card-title">
             <a :href="item.link" target="_blank">
-              <p v-if="item.name">{{ item.name }}</p>
-              <div v-else class="skeleton-line skeleton-line-full"></div>
+              <p>{{ item.name }}</p>
             </a>
           </h3>
+        </div>
+        <div class="card-body">
+          <p class="text-muted">{{ item.des }}</p>
+          <span class="badge bg-blue-lt">{{ item.category }}</span>
         </div>
       </div>
     </div>
@@ -27,14 +26,11 @@ import axios from 'axios'
 import { ref } from 'vue'
 export default {
   setup() {
-    const meta = ref(['','','','','','','','','','','',''])
+    const meta = ref(0)
     const init = () => {
-      meta.value = ['','','','','','','','','','','',''];
       axios.get('https://zhutian.vercel.app/api?count=12')
-        .then(response => (meta.value = response.data))
-        .catch(error => {
-          console.log(error)
-        });
+        .then(response => meta.value = response.data)
+        .catch(error => console.log(error));
     }
     init()
     return { meta, init }
