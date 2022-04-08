@@ -19,7 +19,7 @@ export default {
           icon: "dashboard",
         },
       ],
-      icon: "https://pic.rmb.bdstatic.com/bjh/cfcaab087f3c2a6f14d1c292273140d7.png",
+      icon: "https://pic.rmb.bdstatic.com/bjh/34e786572bdb8124bd636ab9c1b3476f.jpeg",
       sticky: true,
     };
   },
