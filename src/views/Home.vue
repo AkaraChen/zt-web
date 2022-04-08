@@ -25,7 +25,7 @@ export default {
     const meta = ref(0)
     const init = () => {
       axios.get('https://zhutian.vercel.app/api', {
-        params: { count: /Mobi|Android|iPhone/i.test(navigator.userAgent) ? 6 : 12 }
+        params: { count: /Mobi|Android|iPhone/i.test(navigator.userAgent) ? 4 : 12 }
       })
         .then(response => meta.value = response.data)
         .catch(error => console.log(error));
