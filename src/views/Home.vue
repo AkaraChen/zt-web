@@ -2,13 +2,11 @@
   <div class="row">
     <div
       v-for="item in meta"
-      class="col-md-4 col-lg-3 col-sm-6"
       style="margin-top: 10px"
       :key="item.id"
     >
       <div class="card">
         <img v-if="item.name" class="zoom" :src="item.cover" alt />
-        <div v-else class="skeleton-image zoom"></div>
         <div class="card-body">
           <h3 class="card-title">
             <a :href="item.link" target="_blank">

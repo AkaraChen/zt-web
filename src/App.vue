@@ -9,6 +9,10 @@
 .mt-10 {
   margin-top: 10px;
 }
+
+.container {
+  max-width: 900px;
+}
 </style>
 
 <script>
